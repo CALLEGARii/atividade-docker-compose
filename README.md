@@ -54,6 +54,9 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
    - http://IP_DA_INSTANCIA:8080 (phpMyAdmin)
    - É possível que você tenha que esperar um pouco para abrir o CRUD, pois o docker-compose estará iniciando o apache2 para mostrar a página da aplicação
 
+   **Dica:**
+   - Recarregar a página(F5) até que a aplicação apareça
+
 ---
 
 ## ⚙️ Configurações internas
