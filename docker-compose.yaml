@@ -11,8 +11,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: mysql123
       MYSQL_DATABASE: deploy_db
-      MYSQL_USER: root                # ← Alterado aqui
-      MYSQL_PASSWORD: mysql123       # ← Reutilizando senha do root
+      MYSQL_USER: root               
+      MYSQL_PASSWORD: mysql123       
     networks:
       - startup_network
     working_dir: /var/www/html
@@ -45,7 +45,7 @@ services:
     restart: always
     environment:
       PMA_HOST: mysql
-      PMA_USER: root                 # ← Também pode usar root aqui se quiser
+      PMA_USER: root                
       PMA_PASSWORD: mysql123
     ports:
       - "8080:80"
