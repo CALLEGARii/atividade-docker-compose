@@ -52,7 +52,7 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
 5. **Acessar a aplicação via navegador:**
    - http://IP_DA_INSTANCIA
    - http://IP_DA_INSTANCIA:8080 (phpMyAdmin)
-   - É possível que você tenha que esperar um pouco para abrir o CRUD, pois o compose estará executando o apache2 para abrir a página
+   - É possível que você tenha que esperar um pouco para abrir o CRUD, pois o compose estará iniciando o apache2 para abrir a página
 
 ---
 
