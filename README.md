@@ -48,12 +48,7 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
    - TCP 8080 (phpMyAdmin)
    - TCP 8081 (acesso externo ao MySQL, opcional e não recomendado para produção)
 
-3. **Acessar a instância via SSH:**
-   ```bash
-   ssh -i "sua-chave.pem" ubuntu@IP_DA_INSTANCIA
-   ```
-
-4. **Instalar Docker e Docker Compose:**
+3. **Instalar Docker e Docker Compose:**
    ```bash
    sudo apt update
    sudo apt install docker.io docker-compose -y
@@ -61,14 +56,14 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
    newgrp docker
    ```
 
-5. **Clonar o projeto e subir:**
+4. **Clonar o projeto e subir:**
    ```bash
    git clone https://github.com/seu-usuario/seu-repo.git
    cd seu-repo
    docker-compose up -d
    ```
 
-6. **Acessar a aplicação via navegador:**
+5. **Acessar a aplicação via navegador:**
    - http://IP_DA_INSTANCIA
    - http://IP_DA_INSTANCIA:8080 (phpMyAdmin)
 
