@@ -34,10 +34,6 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
 4. **Acesse os serviços:**
    - Aplicação web (CRUD): http://localhost
    - phpMyAdmin: http://localhost:8080  
-     - Host: `mysql`
-     - Usuário: `root`
-     - Senha: `mysql123`
-
 ---
 
 ## ☁️ Como subir na AWS (EC2)
@@ -80,20 +76,9 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
 
 ## ⚙️ Configurações internas
 
-- A aplicação PHP conecta no MySQL usando:
-  - Host: `mysql` (nome do serviço no Docker)
-  - Usuário: `root`
-  - Senha: `mysql123`
-  - Banco: `crud`
-
 - O banco é inicializado com a tabela `contato` e alguns registros de exemplo (definidos no arquivo `tabelaContato.sql`).
 
 ---
 
-## ✅ Considerações finais
+## ✅
 
-- Este projeto é voltado para **ambientes de testes, estudos e implantação básica**.
-- Para produção, recomenda-se:
-  - Usar variáveis de ambiente com `.env`
-  - Restringir o acesso ao MySQL externo
-  - Configurar HTTPS com NGINX ou Apache
