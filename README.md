@@ -17,21 +17,7 @@ Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando
 
 ## 🚀 Como rodar localmente com Docker
 
-1. **Pré-requisitos:**
-   - Docker e Docker Compose instalados
-
-2. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repo.git
-   cd seu-repo
-   ```
-
-3. **Suba os contêineres:**
-   ```bash
-   docker-compose up -d
-   ```
-
-4. **Acesse os serviços:**
+. **Acesse os serviços:**
    - Aplicação web (CRUD): http://localhost
    - phpMyAdmin: http://localhost:8080  
 ---
