@@ -1,0 +1,63 @@
+services:
+  web:
+    image: php:8.2-apache
+    container_name: apache_php
+    ports:
+      - "80:80"
+    volumes:
+      - ./CRUD-Contato:/var/www/html
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql123
+      MYSQL_DATABASE: deploy_db
+      MYSQL_USER: root                # ← Alterado aqui
+      MYSQL_PASSWORD: mysql123       # ← Reutilizando senha do root
+    networks:
+      - startup_network
+    working_dir: /var/www/html
+    command: >
+      bash -c "apt-get update && 
+          apt-get install -y default-mysql-client && \
+          docker-php-ext-install pdo pdo_mysql && \
+          apache2-foreground"
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql123
+      MYSQL_DATABASE: deploy_db
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql123
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./tabelaContato.sql:/docker-entrypoint-initdb.d/tabelaContato.sql
+    ports:
+      - "8081:3306"
+    networks:
+      - startup_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root                 # ← Também pode usar root aqui se quiser
+      PMA_PASSWORD: mysql123
+    ports:
+      - "8080:80"
+    networks:
+      - startup_network
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
+  phpmyadmin_data:
+
+networks:
+  startup_network:
+    driver: bridge
