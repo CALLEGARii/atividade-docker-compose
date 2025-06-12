@@ -1,8 +1,5 @@
 
 # 📦 CRUD de Contatos com PHP, MySQL, Apache e phpMyAdmin via Docker Compose
-
-Este projeto é um exemplo de implantação de um sistema CRUD em PHP utilizando contêineres Docker. O ambiente é totalmente containerizado com suporte a banco de dados MySQL, servidor Apache e uma interface de gerenciamento via phpMyAdmin.
-
 ---
 
 ## 📁 Estrutura dos serviços (`docker-compose.yaml`)
